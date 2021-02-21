@@ -1,0 +1,382 @@
+body {
+  color: #333333;
+}
+
+body, h1, h2, h3, p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.wrapper {
+  max-width: 980px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+/* Header */
+
+.header__title {
+  margin-top: 32px;
+  margin-bottom: 12px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+}
+
+.header__description {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.header__description__sign {
+  padding-right: 12px;
+}
+
+.header__description__sign::before {
+  content: url("../img/dots.svg");
+  display: inline-block;
+ 
+  transform: rotate(90deg);
+  margin-top: -2.6px;
+}
+
+.header__description__text {
+  width: 320px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 15px;
+  letter-spacing: 0em;
+  
+  color: #4F4F4F;}
+
+.header__image {
+  background: url("../img/photo1.png") center center no-repeat;
+  background-size: cover;
+
+  height: 202px;
+  width: auto;
+
+  border-radius: 12px;
+}
+
+/* Checkbox */
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 2.3em;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 4px;  background: #FFF;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: 'X';
+  font-weight: 600;
+  position: absolute;
+  top: .525em;
+  left: .16em;
+  font-size: 1.375em;
+  color: #F2994A;
+  line-height: 0;
+  transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* Ingredients */
+
+.ingredients__title {
+  margin-bottom: 13px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.ingredients__dish-element {
+  margin-bottom: 30px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+
+.ingredients__dish-element__title {
+  margin-bottom: 23px;
+
+  font-weight: 400;
+}
+
+.ingredients__dish-element__ingredient {
+  display: flex;
+  margin: 14px 0px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+
+/* Instructions */
+
+.instructions__title {
+  margin-bottom: 28px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 32px;
+  letter-spacing: 0em;
+}
+
+.instructions__step {
+  display: flex;
+  margin-bottom: 11px;
+}
+
+.instructions__step__number-block {
+  margin-right: 15px;
+}
+
+.instructions__step__number-block__digit {
+  height: 36px;
+  width: 36px;
+  
+  background: #F2994A;
+  border-radius: 6px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+
+.instructions__step__description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+/* Source info */
+
+.source-info {
+  margin-top: 28px;
+  margin-bottom: 108px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+/* Footer */
+
+.footer {
+  margin: 24px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #828282;
+}
+
+.footer--highlight {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Dish info */
+
+.dish-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 73px;
+
+  margin-top: 24px;
+  margin-bottom: 30.25px;
+}
+
+.dish-info__col {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-info__field {
+  display: flex;
+  width: 111px;
+  height: 26px;
+}
+
+.dish-info__img {
+  margin-right: 5.42px;
+}
+
+.dish-info__field__title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+
+.dish-info__field__content {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #333333;
+}
+
+.dish-info--orange {
+  color: #F2994A;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .header {
+    margin-bottom: 48px;
+    box-sizing: border-box;
+  }
+
+  .header__title {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  .header__description__text {
+    width: 592px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .header__image {
+    height: 444px;
+  }
+
+  main section {
+    max-width: 582px;
+  }
+
+  main { 
+    position: relative;
+  }
+
+  .ingredients__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .ingredients__dish-element__ingredient {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .dish-info {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    margin: 0px 0px;
+    width: 216px;
+    height: 367px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .dish-info__col {
+    flex-direction: column;
+  }
+  
+  .dish-info__field {
+    display: flex;
+    width: 111px;
+    height: 26px;
+    margin: 21px 0px;
+    margin-left: 40px;
+  }
+  
+  .dish-info__img {
+    margin-right: 5.42px;
+  }
+  
+  .dish-info__field__title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  
+  .dish-info__field__content {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .source-info {
+    font-size: 16px;
+  }
+}
